@@ -16,7 +16,7 @@ spring:
       
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Seoul
     username: shin
     password: fhtmxmvkdlsej1!
     
@@ -29,7 +29,9 @@ spring:
       use-new-id-generator-mappings: false
     show-sql: true
     properties:
-      hibernate.format_sql: true
+      hibernate:
+        format_sql: true
+        globally_quoted_identifiers: true
       
   jackson:
     serialization:
